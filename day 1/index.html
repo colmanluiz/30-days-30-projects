@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather APP - Projeto Dia 01</title>
+    <link rel="stylesheet" href="/day 1/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <form action="" class="header">
+                <input type="text" name="search-bar" id="search-bar" placeholder="Search a city">
+                <button type="submit"><img src="./images/search.png" alt="search-icon" width="20px"></button>
+            </form>
+        </header>
+
+        <main>
+            <div class="tempo-img" data-tempo="img">
+                <img src="./images/clear.png" alt="foto-sun">
+            </div>
+            <div class="tempo-info" data-tempo="info">
+                <h1>99°c</h1>
+                <h2>Cidade</h2>
+            </div>
+        </main>
+
+        <section class="weather-info">
+            <div class="weather-col">
+                <img src="./images/humidity.png">
+                <div>
+                    <p class="humidity">99%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="weather-col">
+                <img src="./images/wind.png">
+                <div>
+                    <p class="wind">9.99 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
