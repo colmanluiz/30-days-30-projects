@@ -115,3 +115,17 @@ dd {
 .wind {
   font-size: 1.75rem;
 }
+
+main {
+  display: none;
+}
+
+.error {
+  text-align: center;
+  margin-top: 30px;
+  display: none;
+}
+
+.ativo {
+  display: block;
+}

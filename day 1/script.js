@@ -10,6 +10,18 @@ function searchCity(event) {
 
   async function checkWeather() {
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
+
+    const html = document.querySelector("main");
+    const error = document.querySelector(".error");
+
+    if (response.status === 404) {
+      error.classList.add("ativo");
+      html.classList.remove("ativo");
+    } else {
+      html.classList.add("ativo");
+      error.classList.remove("ativo");
+    }
+
     var data = await response.json();
 
     console.log(data);
@@ -48,6 +60,7 @@ function searchCity(event) {
         break;
     }
   }
+
   checkWeather();
 }
 
