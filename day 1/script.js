@@ -33,30 +33,42 @@ function searchCity(event) {
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
     let imgIcon = document.querySelector(".tempo-img img");
+    const box = document.querySelector(".box");
     // if (data.weather[0].main === "Clouds") {
     //   imgIcon.setAttribute("src", "./images/clouds.png");
     // }
     switch (data.weather[0].main) {
       case "Clouds":
         imgIcon.src = "./images/clouds.png";
+        box.className = "box";
+        box.classList.add("box-cloud");
         break;
       case "Rain":
         imgIcon.src = "./images/rain.png";
+        box.className = "box";
+        box.classList.add("box-rain");
         break;
       case "Clear":
         imgIcon.src = "./images/clear.png";
+        box.className = "box";
+        box.classList.add("box-clear");
         break;
       case "Snow":
         imgIcon.src = "./images/snow.png";
+        box.className = "box";
+        box.classList.add("box-snow");
         break;
       case "Mist":
         imgIcon.src = "./images/mist.png";
+        box.className = "box";
+        box.classList.add("box-mist");
         break;
       case "Drizzle":
         imgIcon.src = "./images/drizzle.png";
         break;
       default:
         imgIcon.src = "./images/clear.png";
+        box.className = "box";
         break;
     }
   }

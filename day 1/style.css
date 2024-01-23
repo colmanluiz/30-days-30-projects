@@ -129,3 +129,43 @@ main {
 .ativo {
   display: block;
 }
+
+.box-rain {
+  background: linear-gradient(
+    171deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(43, 150, 147, 1) 100%
+  );
+}
+
+.box-clear {
+  background: linear-gradient(
+    171deg,
+    rgba(255, 171, 64, 1) 0%,
+    rgba(255, 114, 32, 1) 100%
+  );
+}
+
+.box-snow {
+  background: linear-gradient(
+    171deg,
+    rgba(218, 218, 218, 1) 35%,
+    rgba(149, 141, 255, 1) 100%
+  );
+}
+
+.box-cloud {
+  background: linear-gradient(
+    171deg,
+    rgba(213, 225, 255, 1) 43%,
+    rgba(189, 130, 255, 1) 100%
+  );
+}
+
+.box-mist {
+  background: linear-gradient(
+    171deg,
+    rgba(224, 231, 234, 1) 0%,
+    rgba(124, 149, 157, 1) 100%
+  );
+}
