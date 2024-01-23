@@ -48,6 +48,7 @@ dd {
   margin-right: 16px;
   color: #555;
   flex: 1;
+  border: 2px solid transparent;
 }
 
 .header input:focus {
@@ -59,9 +60,13 @@ dd {
   height: 60px;
   background: #ebfffc;
   border-radius: 50%;
-  border: 0;
+  border: 2px solid transparent;
   outline: 0;
   cursor: pointer;
+}
+
+.header button:hover {
+  border: 2px solid #b7e0da;
 }
 
 .tempo-img img {
