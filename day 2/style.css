@@ -72,6 +72,10 @@ header h1 {
   position: relative;
 }
 
+.row-list li button {
+  display: block;
+}
+
 .row-list li::before {
   content: "";
   position: absolute;
@@ -88,6 +92,7 @@ header h1 {
 .row-list li.checked {
   color: #555;
   text-decoration: line-through;
+  justify-content: space-between;
 }
 
 .row-list li.checked::before {
