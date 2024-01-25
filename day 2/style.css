@@ -65,10 +65,6 @@ header h1 {
   background: rgb(255, 80, 11);
 }
 
-main {
-  display: none;
-}
-
 .row-list li {
   padding: 12px 8px 12px 50px;
   user-select: none;
@@ -96,8 +92,4 @@ main {
 
 .row-list li.checked::before {
   background-image: url(./images/checked.png);
-}
-
-.ativo {
-  display: block;
 }
