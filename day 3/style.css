@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f7f7f7;
+}
+
+main {
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  width: 600px;
+  margin: 160px auto;
+  padding: 20px;
+}
+
+.watch {
+  text-align: center;
+  padding-top: 60px;
+  font-size: 4rem;
+  color: white;
+}
+
+.watchFunctions {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 30px 0 60px 0;
+}
