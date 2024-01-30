@@ -18,5 +18,22 @@ let hours,
   seconds,
   timer = 0;
 
-function startWatch() {}
+let timerCrono =
+  (hours > 9 ? hours : 0 + hours) + ":" + (minutes > 9)
+    ? minutes
+    : 0 + minutes + ":" + (seconds > 9)
+    ? seconds
+    : 0 + seconds;
+
+function startWatch() {
+  const startSeconds = setInterval(() => {
+    seconds++;
+  }, 1000);
+  const startMinutes = setInterval(() => {
+    minutes++;
+  }, 60000);
+  const startHours = setInterval(() => {
+    hours++;
+  }, 36000000);
+}
 startCrono.addEventListener("click", startWatch);
