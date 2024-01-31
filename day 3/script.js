@@ -11,29 +11,44 @@
 
 // Crie um cronometro utilizando o setInterval. Deve ser possível
 // iniciar, pausar e resetar (duplo clique no pausar).
-const startCrono = document.querySelector(".start");
+const startButton = document.querySelector(".start");
+const stopButton = document.querySelector(".stop");
 
+let crono = 0;
 let hours,
   minutes,
-  seconds,
-  timer = 0;
+  seconds = 0;
 
-let timerCrono =
-  (hours > 9 ? hours : 0 + hours) + ":" + (minutes > 9)
-    ? minutes
-    : 0 + minutes + ":" + (seconds > 9)
-    ? seconds
-    : 0 + seconds;
-
-function startWatch() {
-  const startSeconds = setInterval(() => {
-    seconds++;
-  }, 1000);
-  const startMinutes = setInterval(() => {
-    minutes++;
-  }, 60000);
-  const startHours = setInterval(() => {
-    hours++;
-  }, 36000000);
+function startCrono() {
+  crono = setInterval(refreshCrono, 1000);
 }
-startCrono.addEventListener("click", startWatch);
+
+function stopCrono() {
+  clearInterval(crono);
+}
+
+function padLeft(value) {
+  return value < 10 ? "0" + value : value;
+}
+
+function refreshCrono() {
+  seconds++;
+
+  if (seconds === 60) {
+    seconds = 0;
+    minutes++;
+
+    if (minutes === 60) {
+      minutes = 0;
+      hours++;
+    }
+  }
+
+  const tempoFormatado =
+    padLeft(hours) + ":" + padLeft(minutes) + ":" + padLeft(seconds);
+
+  document.querySelector(".watch").innerHTML = tempoFormatado;
+}
+
+startButton.addEventListener("click", startCrono);
+stopButton.addEventListener("click", stopCrono);
