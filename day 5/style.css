@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+body {
+  background: rgb(0, 0, 26);
+}
+
+.container {
+  width: 550px;
+  margin: 160px auto auto 150px;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 30px;
+  inline-size: 325px;
+  overflow: hidden;
+  font-size: 2.25rem;
+}
+
+span {
+  text-decoration: underline;
+  color: rgb(17, 107, 80);
+}
+
+#password {
+  padding: 20px 15px;
+  width: 100%;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  background-color: white;
+}
+
+.icon {
+  background: url(./images/copy.png) no-repeat right;
+  background-size: 25px;
+  background-position: 410px;
+  cursor: default;
+}
+
+#generatePassword {
+  color: white;
+  outline: 0;
+  border: 0;
+  background: rgb(25, 88, 25);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
