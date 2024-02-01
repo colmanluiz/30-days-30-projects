@@ -50,10 +50,22 @@ header span {
   text-align: left;
 }
 
-.answer:hover {
+.answer:hover:not([disabled]) {
   background: #222;
   color: white;
   transition: all 0.3s;
+}
+
+.answer:disabled {
+  cursor: not-allowed;
+}
+
+.correct {
+  background: #9aeabc;
+}
+
+.incorrect {
+  background: #ff9393;
 }
 
 .next-button {
