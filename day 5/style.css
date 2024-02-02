@@ -7,7 +7,7 @@
 }
 
 body {
-  background: rgb(0, 0, 26);
+  background: #30292f;
 }
 
 .container {
@@ -27,31 +27,52 @@ h1 {
 
 span {
   text-decoration: underline;
-  color: rgb(17, 107, 80);
+  color: #5f5aa2;
 }
 
 #password {
   padding: 20px 15px;
   width: 100%;
-  border-radius: 8px;
   border: 0;
   outline: 0;
   background-color: white;
+  font-size: 1.15rem;
+  border-radius: 8px;
 }
 
-.icon {
-  background: url(./images/copy.png) no-repeat right;
-  background-size: 25px;
-  background-position: 410px;
-  cursor: default;
+.password-bar {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+}
+
+.password-bar img {
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 #generatePassword {
+  display: flex;
+  align-items: center;
   color: white;
   outline: 0;
   border: 0;
-  background: rgb(25, 88, 25);
+  background: #5f5aa2;
   padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  gap: 6px;
+}
+
+#generatePassword:hover {
+  background: #565192;
+}
+
+#generatePassword img {
+  width: 20px;
 }
