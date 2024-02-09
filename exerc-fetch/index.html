@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Exercises</title>
+</head>
+
+<body>
+    <style>
+        label {
+            display: block;
+        }
+
+        input {
+            display: block;
+        }
+
+        .resultadoCep {
+            display: none;
+        }
+
+        .ativo {
+            display: block;
+        }
+    </style>
+    <form id="buscaCep">
+        <label for="cep">CEP</label>
+        <input type="number" id="cep">
+        <input type="button" value="Buscar Cep" id="btnCep">
+    </form>
+    <div class="resultadoCep">
+        <p id="bairro">Bairro: </p>
+        <p id="cepValue">CEP: </p>
+        <p id="cidade">Cidade: </p>
+        <p id="rua">Rua: </p>
+        <p id="uf">UF: </p>
+    </div>
+
+    <div class="valorBitcoin">
+        <p id="valorBtc"></p>
+    </div>
+
+    <div class="chuckJoke">
+        <button id="nextJoke">Próxima</button>
+        <p id="joke"></p>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
