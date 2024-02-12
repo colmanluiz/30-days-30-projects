@@ -4,15 +4,20 @@
 const inputCep = document.querySelector("#cep");
 const btnCep = document.querySelector("#btnCep");
 
-btnCep.addEventListener("click", buscaCep);
+btnCep.addEventListener("click", handleClick);
 
 function handleClick(e) {
   e.preventDefault();
-  console.log(e);
+  const CEP = inputCep.value;
+  document.getElementById("bairro").innerHTML = "Bairro: ";
+  document.getElementById("cepValue").innerHTML = "CEP: ";
+  document.getElementById("cidade").innerHTML = "Cidade: ";
+  document.getElementById("rua").innerHTML = "Rua: ";
+  document.getElementById("uf").innerHTML = "UF: ";
+  buscaCep(CEP);
 }
 
 function buscaCep(CEP) {
-  CEP = inputCep.value;
   fetch(`https://viacep.com.br/ws/${CEP}/json/`)
     .then((response) => /*return*/ response.json())
     .then((cep) => {
@@ -36,7 +41,9 @@ function fetchBtc() {
     .then((response) => response.json())
     .then((blockchainInfo) => {
       const valorBtc = document.querySelector("#valorBtc");
-      valorBtc.innerHTML = "R$" + blockchainInfo.BRL.buy.replace(".", ",");
+      valorBtc.innerHTML =
+        "O valor de compra do bitcoin é: " +
+        ("R$" + blockchainInfo.BRL.buy).replace(".", ",");
     });
 }
 fetchBtc();
