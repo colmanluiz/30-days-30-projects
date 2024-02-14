@@ -18,9 +18,20 @@ function gerarSenha() {
   passwordInput.value = senha;
 }
 
-function copiarSenha() {
-  Navigator.clipboard;
+function handleClick(event) {
+  event.preventDefault();
+  copiarSenha();
+}
+
+async function copiarSenha() {
+  let text = passwordInput.value;
+  try {
+    await navigator.clipboard.writeText(text);
+    alert("Content copied to clipboard");
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
 }
 
 generatePassword.addEventListener("click", gerarSenha);
-copyPassword.addEventListener("click", copiarSenha);
+copyPassword.addEventListener("click", handleClick);
