@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player - day 07</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/36c38f863e.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="container">
+    <div class="music-player">
+        <header>
+            <i id="volume" class="fa-solid fa-volume-low"></i>
+            <i id="menu" class="fa-solid fa-bars"></i>
+        </header>
+
+        <main>
+            <img src="./media/51K-bJibswL.jpg" alt="photoMusic" width="200px">
+            <h1 class="music-name">Pennyroyal</h1>
+            <p class="music-author">Joey Bada$$ ft. MF DOOM</p>
+        </main>
+
+        <nav>
+            <audio controls class="music-bar">
+                <source src="./media/Joey Bada$$ - Pennyroyal (256 kbps).mp3" type="audio/mpeg">
+            </audio>
+            <div>
+                <i id="backward" class="fa-solid fa-backward"></i>
+                <i id="pause" class="fa-solid fa-pause"></i>
+                <i id="forward" class="fa-solid fa-forward"></i>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>
