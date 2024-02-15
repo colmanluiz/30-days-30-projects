@@ -12,12 +12,13 @@
   background: linear-gradient(135deg, #cf9aff, #95c0ff);
   color: #fff;
   padding-top: 4%;
+  padding-bottom: 2%;
   padding-left: 10%;
 }
 
 header h1 {
   display: flex;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   align-items: center;
   margin-bottom: 24px;
 }
@@ -34,10 +35,19 @@ header h1 {
   );
   font-size: 1.15rem;
   border-radius: 24px;
+  border: 1px solid rgb(136, 115, 231);
   padding: 14px 24px;
   color: white;
   cursor: pointer;
   margin-bottom: 16px;
+}
+
+#createNote:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(138, 116, 238) 0%,
+    rgb(93, 41, 212) 100%
+  );
 }
 
 .input-box {
@@ -46,19 +56,28 @@ header h1 {
   width: 100%;
   max-width: 500px;
   min-height: 150px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   padding: 20px;
-  resize: none;
   font-size: 1rem;
   background: #f8f8f8;
   color: #333;
-  outline: none;
+  outline: 0;
 }
 
-.input-box img {
+/* .input-box::after {
+  content: url(./images/delete.png);
+  position: absolute;
+  size: 10px;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+} */
+
+.notes-container img {
   position: absolute;
   width: 25px;
-  bottom: 15px;
+  bottom: 10px;
   right: 15px;
   cursor: pointer;
+  user-select: none;
 }
