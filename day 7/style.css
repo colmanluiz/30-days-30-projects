@@ -20,7 +20,7 @@
     circle,
     rgba(137, 67, 104, 1) 0%,
     rgba(138, 66, 104, 1) 15%,
-    rgba(244, 211, 104, 1) 100%
+    #f4d368 100%
   );
   width: 400px;
   padding: 25px 35px;
@@ -41,6 +41,7 @@ header i {
   border-radius: 50%;
   color: #3b0d26;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 main {
@@ -51,6 +52,7 @@ main img {
   outline: 8px solid white;
   border-radius: 50%;
   margin-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .music-name {
@@ -68,42 +70,70 @@ main img {
   width: 350px;
 }
 
+#progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #f4d368;
+  border-radius: 4px;
+  cursor: pointer;
+  /* margin: 40px 0; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: #ffc711;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 .player-commands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
   margin-top: 30px;
 }
 
 #backward {
-  background: #f1eaf7;
-  color: #000505;
+  background: #f7effd;
+  color: #d8b544;
   padding: 25px;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #backward:hover {
-  background: #eadff3;
+  background: #f1eaf7;
 }
 
 #pause {
-  background: #ff6593;
-  color: #000505;
-  padding: 35px;
+  background: #f4d368;
+  color: #333;
+  padding: 40px;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #pause:hover {
-  background: #ec4c7c;
+  background: #ebca60;
 }
 
 #forward {
-  background: #f1eaf7;
-  color: #000505;
+  background: #f7effd;
+  color: #d8b544;
   padding: 25px;
   border-radius: 50%;
   cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 #forward:hover {
-  background: #eadff3;
+  background: #f1eaf7;
 }
