@@ -1,18 +1,23 @@
-let pause = document.querySelector("#pause");
-let progress = document.querySelector("#progress");
-let song = document.querySelector("#song");
+let progress = document.getElementById("progress");
+let song = document.getElementById("song");
+let pauseIcon = document.querySelector("#pause");
 
-song.addEventListener("load", () => {
-  progress.max = song.duration;
+song.onloadedmetadata = () => {
+  progress.max = song.ondurationchange;
   progress.value = song.currentTime;
-});
+};
 
-function playPause() {
-  if (pause.classList.contains("fa-pause")) {
-    song.pause();
-    pause.classList.remove("fa-pause");
-    pause.classList.add("fa-play");
-  } else song.play();
+function playPause(e) {
+  console.log(e.target);
+  // if (pauseIcon.classList.contains("fa-pause")) {
+  //   song.pause();
+  //   pauseIcon.classList.remove("fa-pause");
+  //   pauseIcon.classList.add("fa-play");
+  // } else {
+  //   song.play();
+  //   pauseIcon.classList.add("fa-pause");
+  //   pauseIcon.classList.remove("fa-play");
+  // }
 }
 
-pause.addEventListener("click", playPause);
+pauseIcon.addEventListener("click", playPause);
