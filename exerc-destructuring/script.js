@@ -1,26 +1,15 @@
-// Extraia o backgroundColor, color e margin do btn
-const btn = document.querySelector("button");
-const btnStyles = getComputedStyle(btn);
+// Crie 4 li's na página
+// Utilizando o for...of
+// adicione uma classe a cada li
+const lis = document.querySelectorAll("li");
 
-const { backgroundColor, color, margin } = btnStyles;
+for (const li of lis) {
+  li.classList.add("ativo");
+}
 
-console.log(backgroundColor);
-
-// Troque os valores das variáveis abaixo
-let cursoAtivo = "JavaScript";
-let cursoInativo = "HTML";
-
-[cursoAtivo, cursoInativo] = [cursoInativo, cursoAtivo];
-
-console.log(cursoAtivo);
-console.log(cursoInativo);
-
-// Corrija o erro abaixo
-const cachorro = {
-  nome: "Bob",
-  raca: "Labrador",
-  cor: "Amarelo",
-};
-
-const { bobCor: cor } = cachorro;
-console.log(cachorro);
+// Utilize o for...in para listar
+// todos as propriedades e valores
+// do objeto window
+for (const key in window) {
+  console.log(`${key}: ${window[key]}`);
+}
